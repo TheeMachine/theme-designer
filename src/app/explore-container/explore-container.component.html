@@ -1,4 +1,81 @@
 <div id="container">
-  <strong>{{ name }}</strong>
-  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" >
+        <ion-card>
+          <ion-card-content>
+            <ion-title>
+              <ion-text color="secondary">
+                <h1> Secondary Color </h1>
+              </ion-text>
+              
+              <ion-text color="primary">
+                <h1>Primary Color</h1>
+              </ion-text>
+              
+              <ion-text color="light">
+                <h1>Light Color</h1>
+              </ion-text>
+              
+              <ion-text color="danger">
+                <h1 > Danger Color </h1>
+              </ion-text>
+              
+              <ion-text color="dark">
+                <h1>Dark Color</h1>
+              </ion-text>
+            </ion-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div [formGroup]="form">
+          <div>
+            <label for="">Primary</label>
+            <input type="color" formControlName="primary">
+          </div>
+
+          <div>
+            <label for="">Secondary</label>
+
+            <input type="color" formControlName="secondary">
+          </div>
+
+          <div>
+            <label for="">Danger</label>
+
+            <input type="color" formControlName="danger">
+          </div>
+
+          <div>
+            <label for="">Warning</label>
+
+            <input type="color" formControlName="warning">
+          </div>
+
+          <div>
+            <label for="">Success</label>
+
+            <input type="color" formControlName="success">
+          </div>
+
+          <div>
+            <label for="">Light</label>
+
+            <input type="color" formControlName="light">
+          </div>
+
+
+         <div>
+           <ion-button (click)="save()">
+             Kaydet
+           </ion-button>
+         </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </div>
